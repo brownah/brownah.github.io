@@ -4,8 +4,10 @@
 	<title>Pokemon Snapbacks</title>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
 <link rel="stylesheet" href="http://www.googledrive.com/host/0B4Y4mVI2zwDFMXNEOEppcWdYbEk">
+<link rel="stylesheet" href="C:\PSMobile\jquery.excoloSlider.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+<script src="C:\PSMobile\jquery.excoloSlider.min.js"></script>
 <script src="http://www.googledrive.com/host/0B4Y4mVI2zwDFZUJEMmhaRGFWOEE"></script>
 <meta name="handheldfriendly" content="true">
 <meta name="mobileoptimized" content="240">
@@ -43,7 +45,14 @@ function applyOrientation() {
 		
 		
 			<div data-role="main" class="removeMe">
-				<a href="http://www.pokemonsnapbacks.co.uk/#!product/prd1/3619074571/arbok"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFeG44VmZVYk5FM3c" id="left" class="gallery"></a>
+			
+			
+			
+			
+			
+			
+			
+				<a href="#arbokgallery"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFeG44VmZVYk5FM3c" id="left" class="gallery"></a>
 				<a href="http://www.pokemonsnapbacks.co.uk/#!product/prd1/3619074571/arbok"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFSEFzNWJMZlNORk0" id="right" class="gallery"></a>
 			    <a href="http://www.pokemonsnapbacks.co.uk/#!product/prd1/2723719571/gengar"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFa1Q5eVVtZ1k1Wms" id="left" class="gallery"></a>
 			<a><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFakp2cG9PRS1Oa3c" id="right" class="gallery"></a>
@@ -558,7 +567,85 @@ function applyOrientation() {
 	</div>	
 	
 	
+		<div data-role="page" id="arbokgallery">
+    	  
+
 	
+		<div data-role="header" id="shadow" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="bheader removeMe">
+			<center><a href="http://www.pokemonsnapbacks.co.uk/#!cart/c25a"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFT2pnRHFxWjNjNjg" alt="Footer" width="100%"></a></center>
+		</div>
+		
+		
+		
+		
+			<div data-role="main" class="removeMe" width="100%" height="100%">
+<div id="slider" data-plugin-options="{ "autoSize":true}">
+    <img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFeG44VmZVYk5FM3c">
+    <img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFeG44VmZVYk5FM3c">
+</div>
+
+<script>
+$(function () {
+    $("#slider").excoloSlider();
+});
+</script>
+		
+			
+			
+			
+						<div class="box7" id="box7">
+							<div class="box-inner7" >
+								<div class="collection" style="font-size:20px"	>
+									<a href="#!" class="collection-header" id="close7"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTmQ2UmJpMTd4b2s" alt="Footer" width="100%"></a> 
+									<a href="#fullcollection" class="collection-item"><center>FULL COLLECTION</center></a>
+									<a href="#gold" class="collection-item"><center>GOLD</center></a>
+									<a href="#silver" class="collection-item"><center>SILVER</center></a>
+									<a href="#bronze" class="collection-item"><center>BRONZE</center></a>
+									<a href="#rarityexplained" class="collection-item"><center>RARITY EXPLAINED</center></a>
+									<a href="#aboutcontact" class="collection-item"><center>ABOUT & CONTACT</center></a>
+								</div>				
+							</div> 
+						</div>     
+		</div>			
+
+<center>
+<div class="showMe">
+    <p style="font-family:hussar">
+            LANDSCAPE MODE NOT SUPPORTED.
+            ROTATE INTO PORTRAIT MODE.
+        </p>
+        <img src="http://googledrive.com/host/0B4Y4mVI2zwDFX2tqRnJWMmlZQU0/" width="100%">
+        </div>	
+</center>
+
+
+						
+		
+		
+			
+		<div data-role="footer" id="shadow" data-id="psfooter" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="removeMe">
+			<center><a id="openpanel7"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTmQ2UmJpMTd4b2s" alt="Footer" width="100%"></a></center>
+		</div>
+		
+		<script type="text/javascript">
+				$(function() {
+    
+					$('#openpanel7').click(function(){
+						$('#box7').animate({'bottom':'0'},300);
+								});
+  
+					$('#close7').click(function(){
+					$('#box7').animate({'bottom':'-100%'},300)        
+					});
+					
+					
+					$("#aboutcontact").on("pageshow" , function() {
+					$('#box7').animate({'bottom':'-100%'},0)
+					});
+					});
+			</script>
+	
+	</div>	
 	
 	
 	</body>
