@@ -7,7 +7,7 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <script src="http://www.googledrive.com/host/0B4Y4mVI2zwDFZUJEMmhaRGFWOEE"></script>
-<script src="http://www.googledrive.com/host/0B4Y4mVI2zwDFQVdXZGRQREhRM0k"></script>
+<script src="http://www.googledrive.com/host/0B4Y4mVI2zwDFeTg4ODUyeDNjWWM"></script>
 <meta name="handheldfriendly" content="true">
 <meta name="mobileoptimized" content="240">
 <meta name="viewport" content="width=device-width,initial-scale=1">	
@@ -29,82 +29,8 @@ function applyOrientation() {
     $('.showMe').show();
   }
 }
+
  </script>
- 
- <script>
- /**SWIPE GALLERY CODE
-
-
-        var IMG_WIDTH = 500;
-        var currentImg = 0;
-        var maxImages = 3;
-        var speed = 500;
-
-        var imgs;
-
-        var swipeOptions = {
-            triggerOnTouchEnd: true,
-            swipeStatus: swipeStatus,
-            allowPageScroll: "vertical",
-            threshold: 75
-        };
-
-        $(function () {
-            imgs = $("#imgs");
-            imgs.swipe(swipeOptions);
-        });
-
-
-        /**
-         * Catch each phase of the swipe.
-         * move : we drag the div
-         * cancel : we animate back to where we were
-         * end : we animate to the next image
-         */
-        function swipeStatus(event, phase, direction, distance) {
-            //If we are moving before swipe, and we are going L or R in X mode, or U or D in Y mode then drag.
-            if (phase == "move" && (direction == "left" || direction == "right")) {
-                var duration = 0;
-
-                if (direction == "left") {
-                    scrollImages((IMG_WIDTH * currentImg) + distance, duration);
-                } else if (direction == "right") {
-                    scrollImages((IMG_WIDTH * currentImg) - distance, duration);
-                }
-
-            } else if (phase == "cancel") {
-                scrollImages(IMG_WIDTH * currentImg, speed);
-            } else if (phase == "end") {
-                if (direction == "right") {
-                    previousImage();
-                } else if (direction == "left") {
-                    nextImage();
-                }
-            }
-        }
-
-        function previousImage() {
-            currentImg = Math.max(currentImg - 1, 0);
-            scrollImages(IMG_WIDTH * currentImg, speed);
-        }
-
-        function nextImage() {
-            currentImg = Math.min(currentImg + 1, maxImages - 1);
-            scrollImages(IMG_WIDTH * currentImg, speed);
-        }
-
-        /**
-         * Manually update the position of the imgs on drag
-         */
-        function scrollImages(distance, duration) {
-            imgs.css("transition-duration", (duration / 1000).toFixed(1) + "s");
-
-            //inverse the number we set in the css
-            var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
-            imgs.css("transform", "translate(" + value + "px,0)");
-        }
-    
-</script>
 
     	<div data-role="page" id="home">
     	  
@@ -114,11 +40,6 @@ function applyOrientation() {
 			<center><a href="http://www.pokemonsnapbacks.co.uk/#!cart/c25a"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFT2pnRHFxWjNjNjg" alt="Footer" width="100%"></a></center>
 		</div>
 		
-					<div id="imgs" style="transition-duration: 0.5s; -webkit-transition-duration: 0.5s; transform: translate(-1000px, 0px);">
-            <img src="https://lh4.googleusercontent.com/_D9-nzLCi9qU/TNQ2hYNqQEI/AAAAAAAADtI/TcqCdc6N26A/s500/twick_pool_stairs~.jpg">
-            <img src="https://lh6.googleusercontent.com/_D9-nzLCi9qU/TNQ2gdP8JYI/AAAAAAAADtI/NU2WBbaXpgU/s500/twick_pool_stairsAndChanginRoom~.jpg">
-            <img src="https://lh4.googleusercontent.com/_D9-nzLCi9qU/TNQ2UWpqLgI/AAAAAAAADtI/-OG4z6RxHwA/s500/twick_pool_hall~.jpg">
-        </div>
 		
 		
 		
@@ -128,7 +49,7 @@ function applyOrientation() {
 			    <a href="http://www.pokemonsnapbacks.co.uk/#!product/prd1/2723719571/gengar"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFa1Q5eVVtZ1k1Wms" id="left" class="gallery"></a>
 			<a><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFakp2cG9PRS1Oa3c" id="right" class="gallery"></a>
 		
-
+			
 			
 			
 						<div class="box" id="box">
@@ -567,6 +488,19 @@ function applyOrientation() {
 	
 	
     	<div data-role="page" id="aboutcontact">
+			<script type="text/javascript">
+$(document).ready(function () {
+
+    $("slidecontainer").itemslide({
+        one_item: true //Set this for proper full screen navigation
+    }); //initialize itemslide
+
+    $(window).resize(function () {
+        $("slidecontainer").reload();
+
+    }); //Recalculate width and center positions and sizes when window is resized
+});
+</script>
     	  
 
 	
@@ -578,6 +512,29 @@ function applyOrientation() {
 		
 		
 			<div data-role="main" class="removeMe">
+				<slidecontainer>
+				<slide>
+					<center><img style="width: auto" height="100%" src="http://www.googledrive.com/host/0B4Y4mVI2zwDFYWxrYnlwS2J0N0U"/></center>
+				</slide>
+				<slide>
+					<img style="width: 100%" height="auto" src="http://www.googledrive.com/host/0B4Y4mVI2zwDFRWFQUjdvSjFJTzQ"/>
+				</slide>
+				<slide>
+					<img style="width: 100%" height="auto" src="http://www.googledrive.com/host/0B4Y4mVI2zwDFVWNaYjFEaExsNVU"/>
+				</slide>
+				<slide>
+					<img style="width: 100%" height="auto" src="http://www.googledrive.com/host/0B4Y4mVI2zwDFSTJhLVBHS0NQWms"/>
+				</slide>
+				<slide>
+					<img style="width: 100%" height="auto" src="http://www.googledrive.com/host/0B4Y4mVI2zwDFVzdENlFFZDhHMEE"/>
+				</slide>
+				<slide>
+					<img style="width: 100%" height="auto" src="http://www.googledrive.com/host/0B4Y4mVI2zwDFcnViRm8xcXdnZUk"/>
+				</slide>
+				<slide>
+					<img style="width: 100%" height="auto" src="http://www.googledrive.com/host/0B4Y4mVI2zwDFS01mUTJKU1AyTHc"/>
+				</slide>
+			</slidecontainer>
 				
 		
 			
