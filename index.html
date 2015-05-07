@@ -21,7 +21,6 @@
 window.onresize = function (event) {
   applyOrientation();
 }
-
 function applyOrientation() {
   if (window.innerHeight > window.innerWidth) {
     $('.removeMe').show();
@@ -31,13 +30,11 @@ function applyOrientation() {
     $('.showMe').show();
   }
 }
-
  </script>
  
  <script type="text/javascript"> <!--ONLOAD FUNCTIONS--->
 				$( document ).ready(function() {
 					$('html, body').animate({scrollTop: '-10px'}, 500);
-					$(".cartbutton").css("opacity", 0);
 					$('.gallery').hide();
 					$('.fullcollectionclick').hide();
 					$('.silverclick').hide();
@@ -77,11 +74,9 @@ body {
   color: #fff;
   z-index:9999999999999999999999999999999999999999999999999999;
 }
-
-.cartbutton {
-  opacity: 1;
+header {
+z-index:99;
 }
-
 </style>
 <script>
 $( document ).ready(function() {
@@ -107,7 +102,7 @@ $(window).scroll(function() {
 </div>
 	
 	<div data-role="header" id="shadow" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="bheader removeMe">
-			<center><a href="http://www.pokemonsnapbacks.co.uk/#!cart/c25a"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFT2pnRHFxWjNjNjg" alt="Footer" width="100%" class="cartbutton"></a></center>
+			<center><a href="http://www.pokemonsnapbacks.co.uk/#!cart/c25a"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFT2pnRHFxWjNjNjg" alt="Footer" width="100%"></a></center>
 	</div>
 		
 		
@@ -125,7 +120,6 @@ $(window).scroll(function() {
 			</div>
 				
 			<div>	<!--GALLERY----->
-
 				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFYXpqalktNElZT28" id="left" class="gallery fullcollectionclick bronzeclick"> <!--BULBASAUR-->
 				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFaTJMMDQyQzFGelU" id="right" class="gallery fullcollectionclick bronzeclick"> <!--CHARMANDER-->
 				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFc1hfTThKR29zMmM" id="left" class="gallery fullcollectionclick bronzeclick"> <!--SQUIRTLE-->
@@ -330,20 +324,16 @@ $(window).scroll(function() {
 		
 		<div data-role="main" class="removeMe"> 
 			<script>
-
 				$(document).ready(function () {
 				
 				$('div.arbokgallery').each(function() {
-
 				$("slidecontainer.arbokgallery").itemslide({
 				one_item: true //Set this for proper full screen navigation
 					}); //initialize itemslide
-
 				$(window).resize(function () {
 				$("slidecontainer.arbokgallery").reload();
 				
 				
-
 				}); //Recalculate width and center positions and sizes when window is resized
 				});
 				
@@ -483,20 +473,16 @@ $(window).scroll(function() {
 		
 		<div data-role="main" class="removeMe"> 
 			<script>
-
 				$(document).ready(function () {
 				
 				$('div.poliwhirlgallery').each(function() {
-
 				$("slidecontainer.poliwhirlgallery").itemslide({
 				one_item: true //Set this for proper full screen navigation
 					}); //initialize itemslide
-
 				$(window).resize(function () {
 				$("slidecontainer.poliwhirlgallery").reload();
 				
 				
-
 				}); //Recalculate width and center positions and sizes when window is resized
 				});
 				
