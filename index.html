@@ -21,15 +21,18 @@ body {
   margin: 0;
   height: 4000px;
 }
-
 .top {
   margin: 0;
-   position: relative;
+  position: relative;
   width: auto;
-  height: 100vh;
-
+  height: 100vw;
+  opacity: 1;
+  text-align: center;
+  font-family: 'helvetica';
+  font-size: 80px;
+  font-weight: 100;
+  color: #fff;
 }
-
 .bottom{
   margin: 0;
   position: relative;
@@ -53,21 +56,17 @@ var splash = document.getElementById('splash'); //get #myDiv
 $( document ).ready(function() {
 $(window).scroll(function() {
   $(".top").css("opacity", 1 - Math.pow($(window).scrollTop() /(splash.offsetHeight),0.5));
-
   if ($('.top').css('opacity') == 0) {
     $('.top').remove();
-
   }
  
-
-
 });
 });
 </script>
 
 
 <div class="top">
-			<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFYWxrYnlwS2J0N0U" alt="" />
+	<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFVWNaYjFEaExsNVU" class="top" id="splash">
 </div>
 <div class="bottom"></div>
 </body>
