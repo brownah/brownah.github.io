@@ -15,8 +15,49 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache"><META HTTP-EQUIV="Expires" CONTENT="-1">
 </head>
-<body>
-<style>
+<body onload="applyOrientation()">
+    
+<script type="text/javascript">    
+window.onresize = function (event) {
+  applyOrientation();
+}
+
+function applyOrientation() {
+  if (window.innerHeight > window.innerWidth) {
+    $('.removeMe').show();
+    $('.showMe').hide();
+  } else {
+    $('.removeMe').hide();
+    $('.showMe').show();
+  }
+}
+
+ </script>
+ 
+ <script type="text/javascript"> <!--ONLOAD FUNCTIONS--->
+				$( document ).ready(function() {
+					$('.gallery').hide();
+					$('.fullcollectionclick').hide();
+					$('.silverclick').hide();
+					$('.goldclick').hide();
+					$('.bronzeclick').hide();
+					$('.rarityclick').hide();
+					$('.aboutclick').hide();
+					$('.featured').show();
+				$('.fullcollectionheading').hide();
+				$('.featuredheading').show();
+				$('.goldheading').hide();
+				$('.silverheading').hide();
+				$('.bronzeheading').hide();
+				
+					});
+			</script>
+ 
+ 
+ 
+	<div data-role="page" id="home">
+	
+	<style>
 body {
   margin: 0;
   height: 4000px;
@@ -32,6 +73,7 @@ body {
   font-size: 80px;
   font-weight: 100;
   color: #fff;
+  z-index:9999999999999999999999999999999999999999999999999999;
 }
 .bottom{
   margin: 0;
@@ -55,9 +97,11 @@ var splash = document.getElementById('splash'); //get #myDiv
 <script>
 $( document ).ready(function() {
 $(window).scroll(function() {
-  $(".top").css("opacity", 0 + Math.pow((($(window).scrollTop()) - (splash.offsetHeight)) /(splash.offsetHeight),2));
+  $(".top").css("opacity", 1 - Math.pow($(window).scrollTop() /(splash.offsetHeight),0.5));
   if ($('.top').css('opacity') == 0) {
     $('.top').remove();
+	$('html, body').animate({scrollTop: '0px'}, 0);
+
   }
  
 });
@@ -68,6 +112,520 @@ $(window).scroll(function() {
 <div class="top">
 	<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFVWNaYjFEaExsNVU" class="top" id="splash">
 </div>
-<div class="bottom"></div>
-</body>
+	
+	<div data-role="header" id="shadow" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="bheader removeMe">
+			<center><a href="http://www.pokemonsnapbacks.co.uk/#!cart/c25a"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFT2pnRHFxWjNjNjg" alt="Footer" width="100%"></a></center>
+	</div>
+		
+		
+		
+		
+		<div data-role="main" class="removeMe"> 
+		
+		
+			<div style="width: 100%"> <!--HEADINGS--->
+				<center><p class="featuredheading pageheading" style="line-height: 2.2; margin: 10px 0 -15px 0; font-family:hussar; font-size:150%">FEATURED SNAPS</p></center>
+				<center><p class="fullcollectionheading pageheading" style="line-height: 2.2; margin: 10px 0 -15px 0; font-family:hussar; font-size:150%">FULL COLLECTION</p></center>
+				<center><p class="goldheading pageheading" style="line-height: 2.2; margin: 10px 0 -15px 0; font-family:hussar; font-size:150%">GOLD</p></center>
+				<center><p class="silverheading pageheading" style="line-height: 2.2; margin: 10px 0 -15px 0; font-family:hussar; font-size:150%">SILVER</p></center>
+				<center><p class="bronzeheading pageheading" style="line-height: 2.2; margin: 10px 0 -15px 0; font-family:hussar; font-size:150%">BRONZE</p></center>	
+			</div>
+				
+			<div>	<!--GALLERY----->
+
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFYXpqalktNElZT28" id="left" class="gallery fullcollectionclick bronzeclick"> <!--BULBASAUR-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFaTJMMDQyQzFGelU" id="right" class="gallery fullcollectionclick bronzeclick"> <!--CHARMANDER-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFc1hfTThKR29zMmM" id="left" class="gallery fullcollectionclick bronzeclick"> <!--SQUIRTLE-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFNmM5U1daNVVMRGM" id="right" class="gallery fullcollectionclick goldclick"> <!--PIDGEOT-->
+					<a href="#arbokgallerypage"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFeG44VmZVYk5FM3c" id="left" class="gallery fullcollectionclick silverclick featured arbokclick"></a> <!--ARBOK-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFNVZ3dEpmaWptdkU" id="right" class="gallery fullcollectionclick bronzeclick"> <!--PIKACHU-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFbk1kSlc4OHFQSjA" id="left" class="gallery fullcollectionclick silver"> <!--VULPIX-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFT0ZUM0ltYllUbnc" id="right" class="gallery fullcollectionclick goldclick"> <!--ARCANINE-->
+					<a href="#poliwhirlgallerypage"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFSEFzNWJMZlNORk0" id="left" class="gallery fullcollectionclick silverclick featured poliwhirlclick"></a> <!--POLIWHIRL-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFbDV2OURPRV8wc2M" id="right" class="gallery fullcollectionclick bronzeclick"> <!--ABRA-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFYmNZaGRUUGwzTlk" id="left" class="gallery fullcollectionclick bronzeclick"> <!--GEODUDE-->
+					<a href="http://www.pokemonsnapbacks.co.uk/#!product/prd1/2723719571/gengar"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFa1Q5eVVtZ1k1Wms" id="right" class="gallery fullcollectionclick goldclick "></a> <!--GENGAR-->
+					<a href="http://www.pokemonsnapbacks.co.uk/#!product/prd1/2723719571/gengar"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFa1Q5eVVtZ1k1Wms" id="left" class="gallery goldclick featured featuredheading"></a> <!--GENGAR FEATURED LEFT-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFQWxJNjJmdHZEYVU" id="left" class="gallery fullcollectionclick silverclick"> <!--EEVEE-->
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFODU0UWpEZ1NXQ1U" id="right" class="gallery fullcollectionclick goldclick"> <!--SNORLAX-->
+				
+				
+				<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFN2JSUGV4S1QwbTA" id="left" class="gallery">
+			</div>
+			
+
+			
+			
+				<div class="box">  <!--FOOTER PANEL---->
+							<div class="box-inner" >
+								<div class="collection" style="font-size:20px"	>
+									<a href="#!" class="collection-header close"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTmQ2UmJpMTd4b2s" alt="Footer" width="100%"></a> 
+									<a class="collection-item featuredmenu"><center>FEATURED SNAPS</center></a>
+									<a class="collection-item fullcollectionmenu"><center>FULL COLLECTION</center></a>
+									<a class="collection-item goldmenu"><center>GOLD</center></a>
+									<a class="collection-item silvermenu"><center>SILVER</center></a>
+									<a class="collection-item bronzemenu"><center>BRONZE</center></a>
+									<a class="collection-item raritymenu"><center>RARITY EXPLAINED</center></a>
+								</div>				
+							</div> 
+						</div>     
+		
+		</div>			
+
+		<center> <!--LANSCAPE MESSAGE-->
+<div class="showMe">
+    <p style="font-family:hussar">
+            LANDSCAPE MODE NOT SUPPORTED.
+            ROTATE INTO PORTRAIT MODE.
+        </p>
+        <img src="http://googledrive.com/host/0B4Y4mVI2zwDFX2tqRnJWMmlZQU0/" width="100%">
+        </div>	
+</center>
+
+
+						
+		
+		
+			
+		<div data-role="footer" id="shadow" data-id="psfooter" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="removeMe">
+			<center><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTmQ2UmJpMTd4b2s" alt="Footer" width="100%" class="openpanel"></center>
+		</div>
+	
+			<script type="text/javascript">
+				$(function() {
+				$('.featuredmenu').click(function(){
+				$('.box').animate({'bottom':'-100%'},300)
+				$('.gallery').hide();
+					$('.fullcollectionclick').hide();
+					$('.silverclick').hide();
+					$('.goldclick').hide();
+					$('.bronzeclick').hide();
+					$('.rarityclick').hide();
+					$('.aboutclick').hide();
+					$('.featured').show();
+					$('.featuredheading').show();
+				$('.fullcollectionheading').hide();
+				$('.goldheading').hide();
+				$('.silverheading').hide();
+				$('.bronzeheading').hide();
+ 					});
+					});
+				$(function() {
+				$('.fullcollectionmenu').click(function(){
+				$('.box').animate({'bottom':'-100%'},300)        
+				$('.fullcollectionclick').show();
+				$('.fullcollectionheading').show();
+				$('.featuredheading').hide();
+				$('.goldheading').hide();
+				$('.silverheading').hide();
+				$('.bronzeheading').hide();
+ 				});
+				});
+				$(function() {
+				$('.goldmenu').click(function(){
+				$('.box').animate({'bottom':'-100%'},300)        
+				$('.fullcollectionclick').hide();
+				$('.goldclick').show();
+				$('.goldheading').show();
+				$('.silverclick').hide();
+				$('.bronzeclick').hide();
+				$('.rarityclick').hide();
+				$('.aboutclick').hide();
+				$('.fullcollectionheading').hide();
+				$('.featuredheading').hide();
+				$('.silverheading').hide();
+				$('.bronzeheading').hide();
+ 				});
+				});
+				$(function() {
+				$('.silvermenu').click(function(){
+				$('.box').animate({'bottom':'-100%'},300)        
+				$('.fullcollectionclick').hide();
+				$('.goldclick').hide();
+				$('.silverclick').show();
+				$('.silverheading').show();
+				$('.bronzeclick').hide();
+				$('.rarityclick').hide();
+				$('.aboutclick').hide();
+				$('.fullcollectionheading').hide();
+				$('.featuredheading').hide();
+				$('.goldheading').hide();
+				$('.bronzeheading').hide();
+ 				});
+				});
+				$(function() {
+				$('.bronzemenu').click(function(){
+				$('.box').animate({'bottom':'-100%'},300)        
+				$('.fullcollectionclick').hide();
+				$('.goldclick').hide();
+				$('.silverclick').hide();
+				$('.bronzeclick').show();
+				$('.bronzeheading').show();
+				$('.rarityclick').hide();
+				$('.aboutclick').hide();
+				$('.fullcollectionheading').hide();
+				$('.featuredheading').hide();
+				$('.goldheading').hide();
+				$('.silverheading').hide();
+ 				});
+				});
+				$(function() {
+				$('.raritymenu').click(function(){
+				$('.box').animate({'bottom':'-100%'},300)        
+				$('.fullcollectionclick').hide();
+				$('.goldclick').hide();
+				$('.silverclick').hide();
+				$('.bronzeclick').hide();
+				$('.rarityclick').show();
+				$('.aboutclick').hide();
+				$('.pageheading').hide();
+ 				});
+				});
+			</script>
+
+			
+			<script> <!---SCROLL TO TOP --->
+			$(function() {
+				var $elem = $('#content');
+				
+				
+				$('.fullcollectionmenu').click(
+					function (e) {
+						$('html, body').animate({scrollTop: '0px'}, 500);
+					}
+				);
+				$('.goldmenu').click(
+					function (e) {
+						$('html, body').animate({scrollTop: '0px'}, 500);
+					}
+				);
+				$('.silvermenu').click(
+					function (e) {
+						$('html, body').animate({scrollTop: '0px'}, 500);
+					}
+				);
+				$('.bronzemenu').click(
+					function (e) {
+						$('html, body').animate({scrollTop: '0px'}, 500);
+					}
+				);
+				$('.raritymenu').click(
+					function (e) {
+						$('html, body').animate({scrollTop: '0px'}, 500);
+					}
+				);
+				$('.featuredmenu').click(
+					function (e) {
+						$('html, body').animate({scrollTop: '0px'}, 500);
+					}
+				);
+            });
+        </script>
+
+	</div>
+ 
+ 
+ 
+ <!---ARBOK SLIDESHOW---->
+<div data-role="page" id="arbokgallerypage">
+				<div data-role="header" id="shadow" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="bheader removeMe">
+			<center><a href="http://www.pokemonsnapbacks.co.uk/#!cart/c25a"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFT2pnRHFxWjNjNjg" alt="Footer" width="100%"></a></center>
+			</div>
+		
+		
+		
+		
+		<div data-role="main" class="removeMe"> 
+			<script>
+
+				$(document).ready(function () {
+				
+				$('div.arbokgallery').each(function() {
+
+				$("slidecontainer.arbokgallery").itemslide({
+				one_item: true //Set this for proper full screen navigation
+					}); //initialize itemslide
+
+				$(window).resize(function () {
+				$("slidecontainer.arbokgallery").reload();
+				
+				
+
+				}); //Recalculate width and center positions and sizes when window is resized
+				});
+				
+				});
+			</script>
+			<script>
+			$(function() {
+			$("#arbokgallerypage").on("pageshow" , function() {
+				$("slidecontainer.arbokgallery").reload();
+					});
+					});
+			</script>
+
+			
+			<div class="arbokgallery">
+				<slidecontainer class="arbokgallery">
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFYWxrYnlwS2J0N0U" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFRWFQUjdvSjFJTzQ" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFVWNaYjFEaExsNVU" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFSTJhLVBHS0NQWms" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFVzdENlFFZDhHMEE" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFcnViRm8xcXdnZUk" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFS01mUTJKU1AyTHc" alt="" />
+					</div>
+					</div>
+				</slide>
+			</slidecontainer>
+			</div>
+			
+			
+			
+			
+			
+						
+	
+	<div class="box">  <!--FOOTER PANEL---->
+							<div class="box-inner" >
+								<div class="collection" style="font-size:20px"	>
+									<a href="#!" class="collection-header close"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTmQ2UmJpMTd4b2s" alt="Footer" width="100%"></a> 
+									<a href="#home" class="collection-item featuredmenu"><center>FEATURED SNAPS</center></a>
+									<a href="#home" class="collection-item fullcollectionmenu"><center>FULL COLLECTION</center></a>
+									<a href="#home" class="collection-item goldmenu"><center>GOLD</center></a>
+									<a href="#home" class="collection-item silvermenu"><center>SILVER</center></a>
+									<a href="#home" class="collection-item bronzemenu"><center>BRONZE</center></a>
+									<a href="#home" class="collection-item raritymenu"><center>RARITY EXPLAINED</center></a>
+								</div>				
+							</div> 
+	</div> 		
+
+<center> <!--LANSCAPE MESSAGE-->
+<div class="showMe">
+    <p style="font-family:hussar">
+            LANDSCAPE MODE NOT SUPPORTED.
+            ROTATE INTO PORTRAIT MODE.
+        </p>
+        <img src="http://googledrive.com/host/0B4Y4mVI2zwDFX2tqRnJWMmlZQU0/" width="100%">
+        </div>	
+</center>
+
+
+						
+		
+		
+			
+<div data-role="footer" id="shadow" data-id="psfooter" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="removeMe">
+			<center><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTmQ2UmJpMTd4b2s" alt="Footer" width="100%" class="openpanel"></center>
+		</div>	
+			
+			
+</div>
+</div>
+
+
+ 
+<!---POLIWHIRL SLIDESHOW---->
+ <!---REPLACE "poliwhirlgallerypage"--->
+<div data-role="page" id="poliwhirlgallerypage">
+				<div data-role="header" id="shadow" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="bheader removeMe">
+			<center><a href="http://www.pokemonsnapbacks.co.uk/#!cart/c25a"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFT2pnRHFxWjNjNjg" alt="Footer" width="100%"></a></center>
+			</div>
+		
+		
+		
+		
+		<div data-role="main" class="removeMe"> 
+			<script>
+
+				$(document).ready(function () {
+				
+				$('div.poliwhirlgallery').each(function() {
+
+				$("slidecontainer.poliwhirlgallery").itemslide({
+				one_item: true //Set this for proper full screen navigation
+					}); //initialize itemslide
+
+				$(window).resize(function () {
+				$("slidecontainer.poliwhirlgallery").reload();
+				
+				
+
+				}); //Recalculate width and center positions and sizes when window is resized
+				});
+				
+				});
+			</script>
+			<script>
+			$(function() {
+			$("#poliwhirlgallerypage").on("pageshow" , function() {
+				$("slidecontainer.poliwhirlgallery").reload();
+					});
+					});
+			</script>
+			
+			<div class="poliwhirlgallery">
+				<slidecontainer class="poliwhirlgallery">
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFRlowUTBlY1FIcDg" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFOEhhNkpSQWRvYlk" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFdmNILXBJRGJjMHc" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFUWJsa0h1NWlQQXc" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFMFNGaGhEY1RJaHc" alt="" />
+					</div>
+					</div>
+				</slide>
+				<slide>
+					<div class="responsive-container">
+					<div class="dummy"></div>
+					<div class="img-container">
+					<div class="centerer"></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTHA3OUpYVjZoR3c" alt="" />
+					</div>
+					</div>
+				</slide>
+			</slidecontainer>
+			</div>
+			
+			
+			
+			
+			
+						
+	
+	<div class="box">  <!--FOOTER PANEL---->
+							<div class="box-inner" >
+								<div class="collection" style="font-size:20px"	>
+									<a href="#!" class="collection-header close"><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTmQ2UmJpMTd4b2s" alt="Footer" width="100%"></a> 
+									<a href="#home" class="collection-item featuredmenu"><center>FEATURED SNAPS</center></a>
+									<a href="#home" class="collection-item fullcollectionmenu"><center>FULL COLLECTION</center></a>
+									<a href="#home" class="collection-item goldmenu"><center>GOLD</center></a>
+									<a href="#home" class="collection-item silvermenu"><center>SILVER</center></a>
+									<a href="#home" class="collection-item bronzemenu"><center>BRONZE</center></a>
+									<a href="#home" class="collection-item raritymenu"><center>RARITY EXPLAINED</center></a>
+								</div>				
+							</div> 
+	</div> 		
+
+<center> <!--LANSCAPE MESSAGE-->
+<div class="showMe">
+    <p style="font-family:hussar">
+            LANDSCAPE MODE NOT SUPPORTED.
+            ROTATE INTO PORTRAIT MODE.
+        </p>
+        <img src="http://googledrive.com/host/0B4Y4mVI2zwDFX2tqRnJWMmlZQU0/" width="100%">
+        </div>	
+</center>
+
+
+						
+		
+		
+			
+<div data-role="footer" id="shadow" data-id="psfooter" data-position="fixed" data-tap-toggle="false" data-tolerance="0,0" class="removeMe">
+			<center><img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFTmQ2UmJpMTd4b2s" alt="Footer" width="100%" class="openpanel"></center>
+		</div>	
+			
+			
+</div>
+</div>
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </body>
 </html>
