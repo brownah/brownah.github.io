@@ -48,7 +48,7 @@ var splash = document.getElementById('splash'); //get #myDiv
 <script>
 $( document ).ready(function() {
 $(window).scroll(function() {
-  $(".top").css("opacity", 1 - Math.pow($(window).scrollTop() /(splash.offsetHeight),2));
+  $(".top").css("opacity", 1 - Math.pow($(window).scrollTop() /(splash.offsetHeight),3.5));
 
   if ($('.top').css('opacity') == 0) {
     $('.top').remove();
