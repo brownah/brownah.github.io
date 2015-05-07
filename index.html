@@ -34,7 +34,6 @@ function applyOrientation() {
  
  <script type="text/javascript"> <!--ONLOAD FUNCTIONS--->
 				$( document ).ready(function() {
-					$('html, body').animate({scrollTop: '-10px'}, 500);
 					$('.gallery').hide();
 					$('.fullcollectionclick').hide();
 					$('.silverclick').hide();
@@ -74,6 +73,19 @@ body {
   color: #fff;
   z-index:9999999999999999999999999999999999999999999999999999;
 }
+.bottom{
+  margin: 0;
+  position: relative;
+  width: 100%;
+  background-color: red;
+  height: 110vh;
+  opacity: 1;
+  text-align: center;
+  font-family: 'helvetica';
+  font-size: 80px;
+  font-weight: 100;
+  color: #fff;
+}
 header {
 z-index:99;
 }
@@ -86,7 +98,7 @@ var splash = document.getElementById('splash'); //get #myDiv
 <script>
 $( document ).ready(function() {
 $(window).scroll(function() {
-  $(".top").css("opacity", 0 + Math.pow(((($(window).scrollTop()) - (splash.offsetHeight)) /(splash.offsetHeight)),2));
+  $(".top").css("opacity", 1 - Math.pow($(window).scrollTop() /(splash.offsetHeight),0.5));
   if ($('.top').css('opacity') == 0) {
     $('.top').remove();
 	$('html, body').animate({scrollTop: '0px'}, 0);
