@@ -102,7 +102,7 @@ var splash = document.getElementById('splash'); //get #myDiv
 <script>
 $( document ).ready(function() {
 $(window).scroll(function() {
-  $(".top").css("opacity", 1.1 - Math.pow($(window).scrollTop() /(splash.offsetHeight),0.5));
+  $(".top").css("opacity", 1.2 - Math.pow($(window).scrollTop() /(splash.offsetHeight),0.5));
   if ($('.top').css('opacity') == 0) {
     $('.top').remove();
 	$('html, body').animate({scrollTop: '0px'}, 0);
