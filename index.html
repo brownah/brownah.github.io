@@ -37,6 +37,7 @@ function applyOrientation() {
  <script type="text/javascript"> <!--ONLOAD FUNCTIONS--->
 				$( document ).ready(function() {
 					$('html, body').animate({scrollTop: '-10px'}, 500);
+					$('.bheader').hide();
 					$('.gallery').hide();
 					$('.fullcollectionclick').hide();
 					$('.silverclick').hide();
@@ -77,10 +78,6 @@ body {
   z-index:9999999999999999999999999999999999999999999999999999;
 }
 
-
-header {
-z-index:99;
-}
 </style>
 <script>
 $( document ).ready(function() {
@@ -94,6 +91,7 @@ $(window).scroll(function() {
   if ($('.top').css('opacity') == 0) {
     $('.top').remove();
 	$('html, body').animate({scrollTop: '0px'}, 0);
+	$('.bheader').show();
 
   }
  
