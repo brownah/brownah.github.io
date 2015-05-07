@@ -42,19 +42,29 @@ body {
 </style>
 <script>
 $( document ).ready(function() {
+var splash = document.getElementById('splash'); //get #myDiv
+alert(splash.offsetHeight);
+});
+</script>
+<script>
+$( document ).ready(function() {
 $(window).scroll(function() {
-  $(".top").css("opacity", 1 - $(window).scrollTop() / (screen.availHeight));
+  $(".top").css("opacity", 1 - $(window).scrollTop() / (splash.offsetHeight));
 
   if ($('.top').css('opacity') == 0) {
     $('.top').remove();
 
   }
  
+ 
 
 });
 });
 </script>
-<div class="top"></div>
+
+
+<div></div>
+						<img src="http://www.googledrive.com/host/0B4Y4mVI2zwDFVWNaYjFEaExsNVU" class="top" id="splash">
 <div class="bottom"></div>
 </body>
 </html>
